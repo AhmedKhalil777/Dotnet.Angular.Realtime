@@ -16,6 +16,7 @@ namespace MyCoffeShopDotnet.Controllers
 
         }
 
+        [HttpGet]
         public async Task<IActionResult> PollingMyCoffee()
         {
             throw new NotImplementedException();
