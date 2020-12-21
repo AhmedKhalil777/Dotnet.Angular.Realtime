@@ -10,20 +10,21 @@ exports.AJAXRequestingComponent = void 0;
 var core_1 = require("@angular/core");
 var AJAXRequestingComponent = /** @class */ (function () {
     function AJAXRequestingComponent() {
+        this.userName = "Ahmed";
+        this.product = 'Hello';
     }
     AJAXRequestingComponent.prototype.ngOnInit = function () {
     };
     AJAXRequestingComponent.prototype.changeCoffee = function () {
         var _this = this;
-        fetch("https://localhost:5001/Polling", {
-            method: "Post",
+        fetch("https://localhost:5001/Ajax", {
+            method: 'POST',
             body: JSON.stringify({ product: this.product, size: this.size }),
             headers: {
                 'content-type': 'application/json'
             }
-        }).then(function (Response) { Response.text(); })
-            .then(function (id) {
-            _this.status = id;
+        }).then(function (response) {
+            return response.json().then().then(function (res) { _this.status = res.message; });
         });
     };
     AJAXRequestingComponent = __decorate([
