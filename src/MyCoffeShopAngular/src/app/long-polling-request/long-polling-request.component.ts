@@ -12,7 +12,7 @@ export class LongPollingRequestComponent implements OnInit {
   status: string;
   product = 'Hello';
   size: number;
-  intervalId: NodeJS.Timeout;
+  intervalId;
   constructor() { }
   ngOnInit(): void {
    this.intervalId =  setInterval(this.poll, 1000)

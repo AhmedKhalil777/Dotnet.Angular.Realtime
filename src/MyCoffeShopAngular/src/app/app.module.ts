@@ -16,14 +16,7 @@ import { MaterialModule } from './shared/material.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AJAXRequestingComponent,
-    NavBarComponent,
-    PollingRequestComponent,
-    LongPollingRequestComponent,
-    ServerSentEventComponent,
-    WebSocketsComponent,
-    SignalRComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
